@@ -1,5 +1,4 @@
 from sys import stdin as s
-# s=open("input.txt","rt")
+s=open("input.txt","rt")
 
-# n = int(s.readline())
-
+n = int(s.readline())
