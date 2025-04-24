@@ -1,0 +1,4 @@
+insertionSort(A[], n):
+    for i ← 1 to n-1
+        Insert A[i] in the appropriate location of A[0... i]
+        

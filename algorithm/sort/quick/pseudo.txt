@@ -1,0 +1,9 @@
+partition(A[], p, r):
+    x ← A[r]                  // pivot 값을 x에 저장
+    i ← p - 1                 // zone 1의 끝 인덱스
+    for j ← p to r - 1:       // zone 3의 시작 인덱스부터 r-1까지 반복
+        if (A[j] < x):        // 만약 A[j]가 pivot보다 작다면
+            i ← i + 1
+            A[i] ↔ A[j]       // A[i]와 A[j]를 교환
+    A[i+1] ↔ A[r]             // pivot과 A[i+1]을 교환
+    return i + 1              // pivot의 최종 위치(인덱스) 반환

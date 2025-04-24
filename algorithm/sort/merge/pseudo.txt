@@ -1,0 +1,9 @@
+mergeSort(A[], p, r):
+    if (p < r)
+        q ← ⎣(p + r)/2⎦                // ➊ p와 r의 중간 위치 계산 (Divide)
+        mergeSort(A, p, q)             // ➋ 앞쪽 절반 정렬 (Conquer)
+        mergeSort(A, q+1, r)           // ➌ 뒤쪽 절반 정렬 (Conquer)
+        merge(A, p, q, r)              // ➍ 두 부분 병합 (Combine)
+
+merge(A[], p, q, r):
+    // 정렬된 두 배열 A[p ... q]와 A[q+1 ... r]을 합쳐 정렬된 배열 A[p ... r]로 만든다.
