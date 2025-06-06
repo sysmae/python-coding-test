@@ -94,3 +94,39 @@ def recur(num):
       rs.pop()
 
 recur(0)
+
+N, M = map(int, input().split())
+
+# rs = []
+# chk = [False] * (N+1)
+
+# def recur(num):
+#     # 1. 함수 호출 시점 로그
+#     print(f"recur 호출: num={num}, 현재 수열={rs}, 방문 체크={chk[1:]}")
+    
+#     # 2. 종료 조건 체크
+#     if num == M:
+#         print('완성된 수열:', ' '.join(map(str, rs)))
+#         return
+    
+#     # 3. 모든 숫자에 대해 시도
+#     for i in range(1, N+1):
+#         if chk[i] == False:
+#             # 4. 선택 시도 로그
+#             print(f"  {i} 선택 시도")
+            
+#             # 5. 선택하기
+#             chk[i] = True
+#             rs.append(i)
+            
+#             # 6. 재귀 호출
+#             recur(num+1)
+            
+#             # 7. 되돌리기 (백트래킹)
+#             chk[i] = False
+#             rs.pop()
+            
+#             # 8. 되돌아감 로그
+#             print(f"  {i} 선택 취소, 되돌아감")
+
+# recur(0)
