@@ -25,3 +25,12 @@ print(six) # 3
 # 매개 변수가 주어지면 true 혹은 false가 결정 되어야 한다.
 # 가능한 해의 영역이 연속적이어야 한다.
 # 범위를 반씩 줄여가며 가운데 값이 true인지 false인지 판단한다.
+
+def search(st, en, target):
+  if st == en:
+    return st
+  mid = (st + en) // 2
+  if target(mid):
+    return search(mid + 1, en, target)
+  else:
+    return search(st, mid, target)
